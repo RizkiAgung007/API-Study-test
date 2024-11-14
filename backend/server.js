@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 const port = 5000;
 
-// Mengaktifkan middleware CORS untuk mengizinkan akses dari port 3000
+// Mengaktifkan middleware CORS untuk mengizinkan akses dari port 3000 atau lainnya
 app.use(cors());
 
 // Middleware untuk memproses body request menjadi format JSON

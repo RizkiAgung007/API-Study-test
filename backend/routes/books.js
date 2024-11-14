@@ -3,10 +3,10 @@ const fs = require('fs');
 const path = require('path');
 const router = express.Router();
 
-// Path ke file books.json
+// File untuk menggabungkan data input ke file books.json
 const booksFilePath = path.join(__dirname, '../data/books.json');
 
-// Fungsi helper untuk membaca data buku dari books.json
+// Fungsi untuk membaca data buku dari books.json
 function readBooks() {
   try {
     const data = fs.readFileSync(booksFilePath, 'utf-8');
@@ -16,12 +16,12 @@ function readBooks() {
   }
 }
 
-// Fungsi helper untuk menulis data buku ke books.json
+// Fungsi untuk menulis data buku ke books.json
 function writeBooks(data) {
   fs.writeFileSync(booksFilePath, JSON.stringify(data, null, 2)); // Menyimpan data ke file JSON
 }
 
-// Fungsi helper untuk menambahkan buku dengan ID di posisi atas objek buku
+// Fungsi untuk menambahkan buku dengan ID 
 function addBookWithId(book) {
   const books = readBooks();
   const newId = books.length > 0 ? Math.max(...books.map(b => b.id)) + 1 : 1; 
