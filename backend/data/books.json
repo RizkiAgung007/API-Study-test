@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "nama_buku": "Book One",
+    "nama_publish": "Publisher One",
+    "tahun_terbit": 2020
+  },
+  {
+    "id": 2,
+    "name": "Booking",
+    "publisher": "Ama",
+    "year": "2002"
+  }
+]
